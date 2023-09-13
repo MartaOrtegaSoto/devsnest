@@ -32,12 +32,13 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
         </div>
         <div className="post-content">
           <ReactMarkdown
-      children={markdownBody}
       remarkPlugins={[remarkGfm]}
       components={{
         code: CodeBlock,
       }}
-      />
+      >
+      {markdownBody}
+      </ReactMarkdown>
         </div>
       </article>
     </Layout>

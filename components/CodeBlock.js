@@ -28,11 +28,12 @@ export default function CodeBlock ({node, inline, className, children, ...props}
             showLineNumbers={true}
             showInlineLineNumbers={false}
             lineNumberStyle={{fontStyle: 'normal', color: '#374151'}}
-            children={String(children).replace(/\n$/, '')}
             language={match[1]}
             PreTag="div"
             style={tomorrow}
-          />
+          >
+            {String(children).replace(/\n$/, '')}
+            </SyntaxHighlighter>
     </div>
         ) : (
          <code {...props} className="inline-code">
