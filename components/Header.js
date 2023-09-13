@@ -9,7 +9,7 @@ export default function Header(props) {
         <header className="header">
             <div className="container">
                 <Link href="/">
-                    <img src="/logos/DevNestLogo.png" />
+                    <img src="/devsnest/logos/DevNestLogo.png" />
                     <h1>{props.siteTitle}</h1>
                 </Link>
                 <div>
