@@ -34,7 +34,7 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
           <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={{
-        code: CodeBlock,
+          code: CodeBlock
       }}
       >
       {markdownBody}

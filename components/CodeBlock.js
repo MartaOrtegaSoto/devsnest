@@ -1,10 +1,10 @@
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { nightOwl, tomorrow  } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { useState, useEffect } from 'react';
 import { ClipboardIcon, CopiedIcon } from '../assets/icons';
 
-export default function CodeBlock ({node, inline, className, children, ...props}) {
+export default function CodeBlock ({node, value, inline, className, children, ...props}) {
       const [copied, setCopied] = useState(false);
 
       useEffect(() => {
