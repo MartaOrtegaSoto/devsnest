@@ -10,7 +10,7 @@ const Index = props => {
           siteDescription={props.description}
       >
         <section>
-          <BlogList allBlogs={props.allBlogs} />
+          <BlogList allBlogs={props.allBlogs} allTags={props.allTags}/>
         </section>
       </Layout>
   )
@@ -28,6 +28,7 @@ export async function getStaticProps() {
   const keys = webpackContext.keys()
   const values = keys.map(webpackContext)
 
+  const allTags = new Set();
   // getting the post data from the files contained
   // in the "posts" folder
   const posts = keys.map((key, index) => {
@@ -46,7 +47,9 @@ export async function getStaticProps() {
 
     // parsing the YAML metadata and markdown body
     // contained in the .md file
-    const document = matter(value.default)
+    const document = matter(value.default);
+    const tags = document.data.tags
+    tags.forEach(tag => allTags.add(tag))
 
     return {
       frontmatter: document.data,
@@ -55,9 +58,11 @@ export async function getStaticProps() {
     }
   })
 
+    console.log('alltags', allTags)
   return {
     props: {
       allBlogs: posts,
+      allTags: [...allTags],
       title: siteConfig.default.title,
       description: siteConfig.default.description,
     },

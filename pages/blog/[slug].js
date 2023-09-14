@@ -12,6 +12,7 @@ function reformatDate(fullDate) {
 }
 
 export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
+    console.log('front', frontmatter)
   return (
     <Layout siteTitle={siteTitle}>
       <article className="post">
@@ -29,6 +30,11 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
               <span>{reformatDate(frontmatter.date)}</span>
               <span>By: {frontmatter.author}</span>
           </div>
+        <div className="post-tag-list">
+            { frontmatter.tags && frontmatter.tags.map((tag, i) => (
+                <div className="post-tag" key={i}><span className="post-tag-hash"># </span><span className="post-tag-text">{tag}</span></div>
+            )) }
+        </div>
         </div>
         <div className="post-content">
           <ReactMarkdown

@@ -2,9 +2,9 @@
 author: Marta Ortega Soto
 date: '2023-09-12 15:20'
 hero_image: /devsnest/heros/alfons-taekema-bali.jpg
-title: Linux Permissions
+title: New Perm Version
 description: A rundown of linux Permissions
-tags: ['linux', 'test']
+tags: ['linux', 'version', 'random']
 ---
 # Linux Permissions
 ## Viewing permissions

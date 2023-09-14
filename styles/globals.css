@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Poppins:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -9,7 +8,6 @@
 }
 
 /* General */
-
 body {
     font-family: 'Poppins', sans-serif;
     background: #1B2430;
@@ -85,7 +83,6 @@ header img {
     gap: 10px;
 }
 
-
 .blog-info {
     flex: 1 1 0%;
 }
@@ -116,14 +113,12 @@ header img {
     margin-bottom: 10px;
 }
 
+.tag-list {
+    margin-bottom: .5rem;
+    font-size: 1.25rem;
+}
+
 /* Post */
-/*
-.post
-    .post-hero
-    .post-info
-        .post-metadata
-    .post-content
-    */
 .post {
     font-family: 'Poppins', sans-serif;
     color: #DDE6ED;
@@ -252,4 +247,35 @@ button.icon {
     top: 1rem;
     right: 1rem;
     z-index: 5;
+}
+
+/* Tags */
+.post-tag {
+    display: inline-block;
+    font-family: 'Inconsolata', monospace;
+    color: #f9fafb;
+    padding: .25rem .375rem;
+    margin-right: .25rem;
+}
+
+.filter-tag {
+    cursor: pointer;
+}
+
+.selected-tag {
+    border-radius: 0.25rem;
+    background: #374151;
+}
+
+.unselected-tag {
+    opacity: 0.6;
+}
+
+.post-tag-text {
+    border-bottom: 1px solid #374151;
+}
+
+.post-tag-hash {
+    margin-right: 2px;
+    color: #bc7c70;
 }
