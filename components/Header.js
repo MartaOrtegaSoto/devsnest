@@ -4,12 +4,11 @@ import Link from "next/link"
 export default function Header(props) {
     const isInfoPage = typeof window !== "undefined" && window.location.pathname === "/info"
 
-        // <header className={styles.header}>
     return (
         <header className="header">
             <div className="container">
                 <Link href="/">
-                    <img src="/devsnest/logos/DevNestLogo.png" />
+                    <img src="/logos/DevNestLogo.png" />
                     <h1>{props.siteTitle}</h1>
                 </Link>
                 <div>
