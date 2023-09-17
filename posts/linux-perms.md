@@ -1,12 +1,11 @@
 ---
 author: Marta Ortega Soto
 date: '2023-09-12 15:20'
-hero_image: /heros/alfons-taekema-bali.jpg
+hero_image: /heros/norris-niman-iceland.jpg
 title: New Perm Version
 description: A rundown of linux Permissions
 tags: ['linux', 'version', 'random']
 ---
-# Linux Permissions
 ## Viewing permissions
 ```bash
 $ ls -lah

@@ -1,7 +1,7 @@
 ---
 author: Marta Ortega Soto
 date: '2023-09-12 15:20'
-hero_image: /heros/alfons-taekema-bali.jpg
+hero_image: /heros/john-o-nolan-mauritius.jpg
 title: Linux Permissions
 description: A rundown of linux Permissions
 tags: ['linux', 'test']

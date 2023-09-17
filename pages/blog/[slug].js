@@ -17,6 +17,10 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
     <Layout siteTitle={siteTitle}>
       <article className="post">
         <h1>{frontmatter.title}</h1>
+        <div className="post-metadata">
+            <span>{reformatDate(frontmatter.date)}</span>
+            <span>By: {frontmatter.author}</span>
+        </div>
         <figure className="post-hero">
           <Image
             width="1920"
@@ -25,17 +29,11 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
             alt={`blog_hero_${frontmatter.title}`}
           />
         </figure>
-        <div className="post-info">
-          <div className="post-metadata">
-              <span>{reformatDate(frontmatter.date)}</span>
-              <span>By: {frontmatter.author}</span>
-          </div>
-        <div className="post-tag-list">
-            { frontmatter.tags && frontmatter.tags.map((tag, i) => (
-                <div className="post-tag" key={i}><span className="post-tag-hash"># </span><span className="post-tag-text">{tag}</span></div>
-            )) }
-        </div>
-        </div>
+            <div className="post-tag-list">
+                { frontmatter.tags && frontmatter.tags.map((tag, i) => (
+                    <div className="post-tag" key={i}><span className="post-tag-hash"># </span><span className="post-tag-text">{tag}</span></div>
+                )) }
+            </div>
         <div className="post-content">
           <ReactMarkdown
       remarkPlugins={[remarkGfm]}

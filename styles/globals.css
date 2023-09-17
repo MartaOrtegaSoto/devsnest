@@ -67,7 +67,7 @@ header img {
     border-bottom: 1px solid rgba(255, 224, 186, 0.6);
 }
 
-.blog-list ul li:hover {
+.blog-list ul li:not(:last-child):hover {
     border-bottom: 2px solid #444;
 }
 
@@ -79,7 +79,6 @@ header img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-height: 180px;
     gap: 10px;
 }
 
@@ -87,6 +86,7 @@ header img {
     flex: 1 1 0%;
 }
 .hero-image {
+    max-height: 180px;
     max-width: 300px;
 }
 
@@ -131,20 +131,32 @@ header img {
 .post-hero {
     margin: 20px auto;
     margin-bottom: 5px;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .post-hero img {
+/*    height: 450px;
+    width: 750px;
+*/
+    width: 75%;
+    height: auto;
+    max-height: 500px;
     border-radius: 5px;
-    max-height: 400px;
-    width: 100%;
+}
+
+.post-info {
+    width: 50%;
+    margin: auto;
 }
 
 .post-metadata {
-    width: 50%;
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
     opacity: .8;
+    margin-bottom: 0.5rem;
 }
 
 .post-content {
@@ -278,4 +290,27 @@ button.icon {
 .post-tag-hash {
     margin-right: 2px;
     color: #bc7c70;
+}
+
+@media(max-width: 568px) {
+    .blog-list ul li .blog-link {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .hero-image {
+        max-height: 150px;
+    }
+
+    .post-hero img {
+        width: 70%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .container {
+      max-width: 500px;
+    }
 }
